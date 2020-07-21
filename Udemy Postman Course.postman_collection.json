@@ -1,0 +1,120 @@
+{
+	"info": {
+		"_postman_id": "d03c3608-f9c1-48ac-ad7d-af34133be0f7",
+		"name": "Udemy Postman Course",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Status Request",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "httpbin.org/status/:status?name=Ola",
+					"host": [
+						"httpbin",
+						"org"
+					],
+					"path": [
+						"status",
+						":status"
+					],
+					"query": [
+						{
+							"key": "name",
+							"value": "Ola"
+						}
+					],
+					"variable": [
+						{
+							"key": "status",
+							"value": "502"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Request",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "c",
+						"value": "bar",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "httpbin.org/get",
+					"host": [
+						"httpbin",
+						"org"
+					],
+					"path": [
+						"get"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Auth Request",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "test",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "httpbin.org/bearer",
+					"host": [
+						"httpbin",
+						"org"
+					],
+					"path": [
+						"bearer"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Post Request",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"orderId\" : \"1234\",\r\n    \"product\" : [\r\n        {\r\n            \"qualityId\" : \"20\",\r\n            \"productId\" : \"2000\"\r\n        },\r\n        {\r\n            \"qualityId\" : \"30\",\r\n            \"productId\" : \"3000\"\r\n        }\r\n    ],\r\n    \"custormerId\" : \"100\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "httpbin.org/post",
+					"host": [
+						"httpbin",
+						"org"
+					],
+					"path": [
+						"post"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"protocolProfileBehavior": {}
+}
